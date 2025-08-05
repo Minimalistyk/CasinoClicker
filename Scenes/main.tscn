@@ -16,45 +16,62 @@ grow_vertical = 2
 script = ExtResource("1_bo1nx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 2
-offset_left = 556.0
-offset_top = 343.0
-offset_right = 596.0
-offset_bottom = 343.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -200.0
+offset_top = -257.5
+offset_right = 200.0
+offset_bottom = 257.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BuissnesPanel" parent="VBoxContainer" instance=ExtResource("1_jjgbg")]
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="BuissnesPanel" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("1_jjgbg")]
 layout_mode = 2
 
-[node name="BuissnesPanel2" parent="VBoxContainer" instance=ExtResource("1_jjgbg")]
+[node name="BuissnesPanel2" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("1_jjgbg")]
 layout_mode = 2
 
-[node name="BuissnesPanel3" parent="VBoxContainer" instance=ExtResource("1_jjgbg")]
+[node name="BuissnesPanel3" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("1_jjgbg")]
+layout_mode = 2
+
+[node name="BuissnesPanel4" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("1_jjgbg")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="BuissnesPanel" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_jjgbg")]
+layout_mode = 2
+
+[node name="BuissnesPanel2" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_jjgbg")]
+layout_mode = 2
+
+[node name="BuissnesPanel3" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_jjgbg")]
+layout_mode = 2
+
+[node name="BuissnesPanel4" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_jjgbg")]
 layout_mode = 2
 
 [node name="CashLabel" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -64.0
 offset_top = 12.0
 offset_right = 64.0
-offset_bottom = 64.0
+offset_bottom = -584.0
 grow_horizontal = 2
 text = "CASH: 999"
 label_settings = SubResource("LabelSettings_bo1nx")
